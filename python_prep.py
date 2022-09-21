@@ -15,22 +15,32 @@
 def exercise_1(S):
 
     # TODO: Add up the numbers in S using a for-loop and return the sum.
+    sum_vals = 0
+    for vals in S:
+        sum_vals = sum_vals + vals
 
-    return 
+    return sum_vals
 
 def exercise_2(S):
 
     # TODO: Add up the numbers in S in 2 lines or less and return the sum.
+    sum_vals = sum(S)
 
-    return 
+    return sum_vals
 
-def exercise_3():
+def exercise_3(S):
 
     # TODO: Build a dictionary with:
+    ## Building the list here:
+    S.append(0)
+    value_dict = dict()
+    for num in S:
+        value_dict[(num,num)] = (8*num) + (3*num)
+
     #  - keys: tuple of points (x, y)
     #  - values: value of function f = 8x + 3y
 
-    return 
+    return value_dict
 
 # ------- Main program -------
 if __name__ == "__main__":
@@ -46,6 +56,6 @@ if __name__ == "__main__":
     print("\tSum:", ex_sum)
 
     print("\nExercise 3:")
-    f = exercise_3()
+    f = exercise_3(S)
     for key, val in f.items():
         print("\tInput:", key, "Output:", val)
