@@ -28,11 +28,11 @@ def exercise_2(S):
 
     return sum_vals
 
-def exercise_3(S):
+def exercise_3():
 
     # TODO: Build a dictionary with:
     ## Building the list here:
-    S.append(0)
+    S = [0,1, 2, 3, 4, 5]
     value_dict = dict()
     for num in S:
         value_dict[(num,num)] = (8*num) + (3*num)
@@ -56,6 +56,6 @@ if __name__ == "__main__":
     print("\tSum:", ex_sum)
 
     print("\nExercise 3:")
-    f = exercise_3(S)
+    f = exercise_3()
     for key, val in f.items():
         print("\tInput:", key, "Output:", val)
